@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.1 (Python 3.13.2 on win32)" generated="2025-12-28T16:51:28.132148" rpa="false" schemaversion="5">
+<suite id="s1" name="UAT Lab04 001 success" source="C:\Users\Asus\TestAutomationLab\tests\UAT_Lab04_001_success.robot">
+<kw name="Open Registration" owner="resource" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-12-28T16:51:29.157026" level="INFO">Opening browser 'chrome' to base url 'http://localhost:7272/StarterFiles/Registration.html'.</msg>
+<arg>${URL_REG}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-12-28T16:51:29.156244" elapsed="3.508810"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-12-28T16:51:32.666191" elapsed="0.055931"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Workshop Registration</arg>
+<arg>5s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-12-28T16:51:32.722738" elapsed="0.064238"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2025-12-28T16:51:32.802278" level="INFO">Page title is 'Registration'.</msg>
+<arg>Registration</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2025-12-28T16:51:32.787778" elapsed="0.014784"/>
+</kw>
+<status status="PASS" start="2025-12-28T16:51:29.153920" elapsed="3.648937"/>
+</kw>
+<test id="s1-t1" name="UAT_Lab04_001_Register_Success" line="8">
+<kw name="Go Registration" owner="resource">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-12-28T16:51:32.805569" level="INFO">Opening url 'http://localhost:7272/StarterFiles/Registration.html'</msg>
+<arg>${URL_REG}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-12-28T16:51:32.805198" elapsed="0.043333"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Workshop Registration</arg>
+<arg>5s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-12-28T16:51:32.849230" elapsed="0.022964"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2025-12-28T16:51:32.882663" level="INFO">Page title is 'Registration'.</msg>
+<arg>Registration</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2025-12-28T16:51:32.872692" elapsed="0.010426"/>
+</kw>
+<status status="PASS" start="2025-12-28T16:51:32.804564" elapsed="0.078994"/>
+</kw>
+<kw name="Clear Form" owner="resource">
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>id=firstname</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-28T16:51:32.885594" elapsed="0.104685"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>id=lastname</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-28T16:51:32.990709" elapsed="0.067776"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>id=organization</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-28T16:51:33.059192" elapsed="0.071374"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>id=email</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-28T16:51:33.131072" elapsed="0.085251"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>id=phone</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-28T16:51:33.216829" elapsed="0.074499"/>
+</kw>
+<status status="PASS" start="2025-12-28T16:51:32.884709" elapsed="0.406958"/>
+</kw>
+<kw name="Fill Form" owner="resource">
+<if>
+<branch type="IF" condition="'${fn}' != '${EMPTY}'">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-12-28T16:51:33.296584" level="INFO">Typing text 'Somyod' into text field 'id=firstname'.</msg>
+<arg>id=firstname</arg>
+<arg>${fn}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-28T16:51:33.296017" elapsed="0.177770"/>
+</kw>
+<status status="PASS" start="2025-12-28T16:51:33.294229" elapsed="0.179816"/>
+</branch>
+<status status="PASS" start="2025-12-28T16:51:33.294109" elapsed="0.180132"/>
+</if>
+<if>
+<branch type="IF" condition="'${ln}' != '${EMPTY}'">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-12-28T16:51:33.477129" level="INFO">Typing text 'Sodsai' into text field 'id=lastname'.</msg>
+<arg>id=lastname</arg>
+<arg>${ln}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-28T16:51:33.476417" elapsed="0.150447"/>
+</kw>
+<status status="PASS" start="2025-12-28T16:51:33.474556" elapsed="0.152548"/>
+</branch>
+<status status="PASS" start="2025-12-28T16:51:33.474469" elapsed="0.152827"/>
+</if>
+<if>
+<branch type="IF" condition="'${org}' != '${EMPTY}'">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-12-28T16:51:33.629441" level="FAIL">Keyword 'SeleniumLibrary.Input Text' expected 2 to 3 arguments, got 1.</msg>
+<arg>id=organization ${org}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="FAIL" start="2025-12-28T16:51:33.628932" elapsed="0.000654">Keyword 'SeleniumLibrary.Input Text' expected 2 to 3 arguments, got 1.</status>
+</kw>
+<status status="FAIL" start="2025-12-28T16:51:33.627521" elapsed="0.002286">Keyword 'SeleniumLibrary.Input Text' expected 2 to 3 arguments, got 1.</status>
+</branch>
+<status status="FAIL" start="2025-12-28T16:51:33.627447" elapsed="0.002505">Keyword 'SeleniumLibrary.Input Text' expected 2 to 3 arguments, got 1.</status>
+</if>
+<if>
+<branch type="IF" condition="'${email}' != '${EMPTY}' Input Text">
+<kw name="id=email">
+<arg>${email}</arg>
+<status status="NOT RUN" start="2025-12-28T16:51:33.630694" elapsed="0.000090"/>
+</kw>
+<status status="NOT RUN" start="2025-12-28T16:51:33.630249" elapsed="0.000668"/>
+</branch>
+<status status="NOT RUN" start="2025-12-28T16:51:33.630197" elapsed="0.000849"/>
+</if>
+<if>
+<branch type="IF" condition="'${phone}' != '${EMPTY}' Input Text">
+<kw name="id=phone">
+<arg>${phone}</arg>
+<status status="NOT RUN" start="2025-12-28T16:51:33.631480" elapsed="0.000064"/>
+</kw>
+<status status="NOT RUN" start="2025-12-28T16:51:33.631195" elapsed="0.000456"/>
+</branch>
+<status status="NOT RUN" start="2025-12-28T16:51:33.631152" elapsed="0.000582"/>
+</if>
+<arg>${FN}</arg>
+<arg>${LN}</arg>
+<arg>${ORG}</arg>
+<arg>${EMAIL}</arg>
+<arg>${PHONE_OK}</arg>
+<status status="FAIL" start="2025-12-28T16:51:33.292986" elapsed="0.338977">Keyword 'SeleniumLibrary.Input Text' expected 2 to 3 arguments, got 1.</status>
+</kw>
+<kw name="Submit" owner="resource">
+<status status="NOT RUN" start="2025-12-28T16:51:33.632801" elapsed="0.000083"/>
+</kw>
+<kw name="Success Page Should Be Shown" owner="resource">
+<status status="NOT RUN" start="2025-12-28T16:51:33.633376" elapsed="0.000074"/>
+</kw>
+<status status="FAIL" start="2025-12-28T16:51:32.803143" elapsed="0.830968">Keyword 'SeleniumLibrary.Input Text' expected 2 to 3 arguments, got 1.</status>
+</test>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-12-28T16:51:33.636063" elapsed="2.232348"/>
+</kw>
+<status status="FAIL" start="2025-12-28T16:51:28.135992" elapsed="7.732671"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="UAT Lab04 001 success" id="s1" pass="0" fail="1" skip="0">UAT Lab04 001 success</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

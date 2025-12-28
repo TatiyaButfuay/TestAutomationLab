@@ -24,7 +24,7 @@ Open Registration
 
 Go Registration
     Go To    ${URL_REG}
-    Wait Until Page Contains    Workshop Registration    5s
+    Wait Until Page Contains    Workshop Registration    15s
     Title Should Be    Registration
 
 Clear Form
@@ -36,11 +36,13 @@ Clear Form
 
 Fill Form
     [Arguments]    ${fn}    ${ln}    ${org}    ${email}    ${phone}
-    IF    '${fn}' != '${EMPTY}'    Input Text    id=firstname    ${fn}
-    IF    '${ln}' != '${EMPTY}'    Input Text    id=lastname     ${ln}
-    IF    '${org}' != '${EMPTY}'   Input Text    id=organization ${org}
-    IF    '${email}' != '${EMPTY}' Input Text    id=email        ${email}
-    IF    '${phone}' != '${EMPTY}' Input Text    id=phone        ${phone}
+
+    Run Keyword If    '${fn}' != '${EMPTY}'      Input Text    id=firstname     ${fn}
+    Run Keyword If    '${ln}' != '${EMPTY}'      Input Text    id=lastname      ${ln}
+    Run Keyword If    '${org}' != '${EMPTY}'     Input Text    id=organization  ${org}
+    Run Keyword If    '${email}' != '${EMPTY}'   Input Text    id=email         ${email}
+    Run Keyword If    '${phone}' != '${EMPTY}'   Input Text    id=phone         ${phone}
+
 
 Submit
     Click Button    id=registerButton
